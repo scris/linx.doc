@@ -31,11 +31,8 @@ allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"><
 
 <h1>Set Up</h1>
 <pre class="snippet"><code class="hljs bash">
-# install dependencies
+vue init scris/linx.vuetemplate my-project-name
 npm install
-
-# cordova setup
-# first edit the project name in app/config.xml
 cd app
 npm install
 cordova platform add ios
@@ -45,21 +42,7 @@ cordova platform add browser
 
 
 <h1>Then</h1>
-
-<p>Then edit your information in:</p>
-
-<pre class="snippet"><code># edit for vue
-package.json
-
-# edit README
-README.md
-
-# edit for cordova
-app/package.json
-
-# edit for electron
-dist/package.json </code></pre>
-
+        
 <p>Now it is time to build your webapp. </p>
 
 <p>Just use it like using vue-cli. (with vue-router and element-ui) </p>
