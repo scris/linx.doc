@@ -31,14 +31,6 @@ allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"><
 
 <h1>Set Up</h1>
 <pre class="snippet"><code class="hljs bash">
-# You can use an CLI tool.
-npm install linx-cli -g
-linx g myproject
-</code></pre>
-
-<h1>Build Setup</h1>
-
-<pre class="snippet"><code class="hljs bash">
 # install dependencies
 npm install
 
@@ -49,7 +41,40 @@ npm install
 cordova platform add ios
 cordova platform add android
 cordova platform add browser
+</code></pre>
 
+
+<h1>Then</h1>
+
+<p>Then edit your information in:</p>
+
+<pre class="snippet"><code># edit for vue
+package.json
+
+# edit README
+README.md
+
+# edit for cordova
+app/package.json
+
+# edit for electron
+dist/package.json </code></pre>
+
+<p>Now it is time to build your webapp. </p>
+
+<p>Just use it like using vue-cli. (with vue-router and element-ui) </p>
+
+<p>You will find it easy to use.</p>
+
+<p>Emm ... One thing left.
+You can use <code>process.env.LINX_AGENT</code> to get which mode is user currently using.
+if you get <code>electron</code> , do things in standalone devices.
+if you get <code>cordova</code>, do things in mobile phones.
+if you get other answer or get nothing, mark it as in the web environment.</p>
+        
+<h1>Commands</h1>
+
+<pre class="snippet"><code class="hljs bash">
 # serve with hot reload at localhost:8080
 npm run dev
 
@@ -68,41 +93,28 @@ npm run e2e
 # run all tests
 npm test
 
-# run Cordova tests
-npm run cdev
-cd app
-cordova run ios
+# build for Cordova (Browser)
+npm run cbrowser
 
-# build for Cordova
-npm run cbuild
-cd app
-cordova run ios
+# build for iOS
+npm run cios
+
+# build for Android
+npm run candroid
 
 # run Electron tests
 npm run edev
 
-# build for Electron
-npm run ebuild</code></pre>
+# before typing these lines,
+# build for Mac X64
+npm run emac
 
-<h1>Then</h1>
+# build for Windows X64
+npm run ewin
 
-<p>Then edit your information in:</p>
+# build for Linux X64
+npm run elinux</code></pre>
 
-<pre class="snippet"><code>package.json
-README.md
-app/package.json</code></pre>
-
-<p>Now it is time to build your webapp. </p>
-
-<p>Just use it like using vue-cli. (with vue-router and element-ui) </p>
-
-<p>You will find it easy to use.</p>
-
-<p>Emm ... One thing left.
-You can use <code>process.env.LINX_AGENT</code> to get which mode is user currently using.
-if you get <code>electron</code> , do things in standalone devices.
-if you get <code>cordova</code>, do things in mobile phones.
-if you get other answer or get nothing, mark it as in the web environment.</p>
     </main>
     <footer class="footer gradient text-center">
         <p class="credits">
