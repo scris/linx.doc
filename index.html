@@ -12,7 +12,7 @@
 <body>
     <header class="header gradient text-center">
         <h1 class="title">linx.vue</h1>
-        <h2 class="subtitle">A Special Vue Boilerplate</h2>
+        <h2 class="subtitle">A Vue-CLI-Based Cross-Platform Boilerplate</h2>
         <p class="gh-btns">
         <iframe src="https://ghbtns.com/github-btn.html?user=scrisstudio&amp;repo=linx.vue&amp;type=watch&amp;count=true&amp;size=large"
 allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
@@ -24,7 +24,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"><
     <main class="wrap">
 <h1>What's it</h1>
 <ul>
-    <p> Linx.vue is a vue boilerplate to create applications that run on Web, Mobile Phones and Standalone Devices in one go.</p>
+    <p>Linx.vue is a vue boilerplate to create applications that run on Web, Mobile Phones and Standalone Devices in one go.</p>
     <p>It is the modified environment that was used in developing <a href="https://github.com/scris/scristask">scristask</a> 1.10+.</p>
     <p>Some code is from <a href="https://github.com/halfrost/vue-objccn">halfrost/vue-objccn</a></p>
 </ul>
@@ -32,9 +32,9 @@ allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"><
 <h1>Set Up</h1>
 <pre class="snippet"><code class="hljs bash">
 vue init scris/linx.vuetemplate my-project-name
-npm install
+yarn
 cd app
-npm install
+yarn
 cordova platform add ios
 cordova platform add android
 cordova platform add browser
@@ -54,6 +54,8 @@ You can use <code>process.env.LINX_AGENT</code> to get which mode is user curren
 if you get <code>electron</code> , do things in standalone devices.
 if you get <code>cordova</code>, do things in mobile phones.
 if you get other answer or get nothing, mark it as in the web environment.</p>
+
+<p>If you wanna make some changes for electron, go to see <code>dist/electron.js</code> as the main part and <code>dist/renderer.electron.js</code> as the renderer part.</p>
         
 <h1>Commands</h1>
 
